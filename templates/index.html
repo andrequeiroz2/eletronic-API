@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Index Page - Eletronic API</legend>
+
+            <div class="col-md-6">
+                <div class="content-section">
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Circuit Resistance: <a href="{{ url_for('help_circuit.show_static_pdf') }}">Link</a></li>
+                        <li>Resistor Resistance: <a href="{{ url_for('help_resistor.show_static_pdf') }}">Link</a></li>
+                        <li>Reference Color: <a href="{{ url_for('help_color.show_static_pdf') }}">Link</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="content-section">
+                    <h4>References</h4>
+                        <ul>
+                            <li>Resistor Table: <a href="{{ url_for('table_resistor.get_table') }}">Link</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="content-section">
+                    <h4>Endpoints</h4>
+                    <ul>
+                        <li>/api/resistor</li>
+                        <li>/api/resistance_all</li>
+                        <li>/api/color/...</li>
+                        <li>/table</li>
+                        <li>/help-resistor</li>
+                        <li>/help-circuit</li>
+                        <li>/help-color</li>
+                    </ul>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

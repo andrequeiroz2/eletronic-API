@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Resistor</legend>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Color</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Factor</th>
+                        <th scope="col">Measured-Unit</th>
+                        <th scope="col">Tolerance</th>
+                        <th scope="col">Coefficient</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for elements in element %}
+                        <tr>
+                            <td>{{elements.color}}</td>
+                            <td>{{elements.value}}</td>
+                            <td>{{elements.factor}}</td>
+                            <td>{{elements.measured_unit}}</td>
+                            <td>{{elements.tolerance}}</td>
+                            <td>{{elements.coefficient}}</td>
+
+                        </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+
